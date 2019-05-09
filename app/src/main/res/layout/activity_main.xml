@@ -10,107 +10,115 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity"
-        android:padding="@dimen/general_padding"
-        android:orientation="vertical">
-        <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent">
+        tools:context=".MainActivity">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_weight="1">
-                <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/general_padding"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Team A"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_size"
+                            android:layout_margin="@dimen/general_margin"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{score.scoreA}"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_size"
+                            android:layout_margin="@dimen/general_margin"/>
+                        <Button
+                            android:id="@+id/teamA_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+3 POINT"
+                            android:layout_margin="@dimen/general_margin"
+                            android:onClick="scorePlus"/>
+                        <Button
+                            android:id="@+id/teamA_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+2 POINT"
+                            android:layout_margin="@dimen/general_margin"
+                            android:onClick="scorePlus"/>
+                        <Button
+                            android:id="@+id/teamA_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="FREE THROW"
+                            android:layout_margin="@dimen/general_margin"
+                            android:onClick="scorePlus"/>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="350dp"
+                        android:background="@color/colorPrimaryDark" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Team B"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_size"
+                            android:layout_margin="@dimen/general_margin"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{score.scoreB}"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_size"
+                            android:layout_margin="@dimen/general_margin"/>
+                        <Button
+                            android:id="@+id/teamB_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+3 POINT"
+                            android:layout_margin="@dimen/general_margin"
+                            android:onClick="scorePlus"/>
+                        <Button
+                            android:id="@+id/teamB_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+2 POINT"
+                            android:layout_margin="@dimen/general_margin"
+                            android:onClick="scorePlus"/>
+                        <Button
+                            android:id="@+id/teamB_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="FREE THROW"
+                            android:layout_margin="@dimen/general_margin"
+                            android:onClick="scorePlus"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Team A"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="@dimen/text_size"
+                    android:text="reset"
+                    android:onClick="resetScore"
+                    android:layout_gravity="center"
                     android:layout_margin="@dimen/general_margin"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@{score.scoreA}"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="@dimen/text_size"
-                    android:layout_margin="@dimen/general_margin"/>
-                <Button
-                    android:id="@+id/teamA_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="+3 POINT"
-                    android:layout_margin="@dimen/general_margin"
-                    android:onClick="scorePlus"/>
-                <Button
-                    android:id="@+id/teamA_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="+2 POINT"
-                    android:layout_margin="@dimen/general_margin"
-                    android:onClick="scorePlus"/>
-                <Button
-                    android:id="@+id/teamA_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="FREE THROW"
-                    android:layout_margin="@dimen/general_margin"
-                    android:onClick="scorePlus"/>
             </LinearLayout>
-            <View
-                android:layout_width="1dp"
-                android:layout_height="350dp"
-                android:background="@color/colorPrimaryDark" />
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_weight="1">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Team B"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="@dimen/text_size"
-                    android:layout_margin="@dimen/general_margin"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@{score.scoreB}"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="@dimen/text_size"
-                    android:layout_margin="@dimen/general_margin"/>
-                <Button
-                    android:id="@+id/teamB_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="+3 POINT"
-                    android:layout_margin="@dimen/general_margin"
-                    android:onClick="scorePlus"/>
-                <Button
-                    android:id="@+id/teamB_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="+2 POINT"
-                    android:layout_margin="@dimen/general_margin"
-                    android:onClick="scorePlus"/>
-                <Button
-                    android:id="@+id/teamB_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="FREE THROW"
-                    android:layout_margin="@dimen/general_margin"
-                    android:onClick="scorePlus"/>
-            </LinearLayout>
-        </LinearLayout>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="reset"
-            android:onClick="resetScore"
-            android:layout_gravity="center"
-            android:layout_margin="@dimen/general_margin"/>
+        </ScrollView>
     </LinearLayout>
 </layout>
